@@ -1,0 +1,9 @@
+<h3>Enter your email to recieve product updates:</h3>
+<% if flash[:error] %>
+  <p><%= flash[:error] %></p>
+<% end %>
+<%= form_for @customer do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.submit 'Subscribe' %>
+<% end %>
